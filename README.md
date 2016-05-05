@@ -1,4 +1,4 @@
-#### pm2 deployment example
+## pm2 deployment example
 
 This is a quick example which demonstrates how `pm2`'s deployment feature should be used.
 Here are the steps you need to take (assuming you have [`vagrant`](https://www.vagrantup.com) installed):
@@ -26,7 +26,7 @@ This deploys echo server to VM.
 Visit `http://http://192.168.60.50`. You should see echo server up and running.
 
 
-#### Zero-Downtime deployments
+## Zero-Downtime deployments
 
 This repo is also a quite good (yet simple) example of zero-downtime deployments with pm2.
 The only change, really, that makes this possible is [this handler](https://github.com/jutaz/pm2-deploy-example/blob/master/server.js#L23-L30),
