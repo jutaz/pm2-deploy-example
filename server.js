@@ -5,7 +5,7 @@ var meta = {
 };
 
 const server = http.createServer((req, res) => {
-  var timeout = ~~(Math.random() * 100).toFixed(2)
+  var timeout = ~~(Math.random() * 100)
   meta.count++;
   setTimeout(function () {
     res.end(JSON.stringify({
