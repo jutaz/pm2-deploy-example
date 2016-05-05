@@ -1,0 +1,29 @@
+{
+  "apps": [{
+    "name": "echo-server",
+    "cwd": "/var/www/production/current/",
+    "script": "/var/www/production/current/server.js",
+    "instances": 4,
+    "exec_mode": "cluster",
+    "env": {
+      "PORT": "8080"
+    }
+  }],
+  "deploy" : {
+    "production" : {
+      // Loads insecure and default vagrant private key.
+      "key": process.env.HOME+"/.vagrant.d/insecure_private_key",
+      "user" : "vagrant",
+      "host" : ["192.168.60.50"],
+      "ref"  : "origin/master",
+      "repo" : "https://github.com/jutaz/pm2-deploy-example.git",
+      "path" : "/var/www/production",
+      // Usually /vagrant/ecosystem.json would link to file in the app itself.
+      // This is just because echo server does not have pm2 support.
+      "post-deploy" : "npm install && pm2 startOrGracefulReload /vagrant/ecosystem.json --env production",
+      "env"  : {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
