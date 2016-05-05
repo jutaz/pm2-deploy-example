@@ -1,0 +1,24 @@
+{
+  "name": "pm2-deploy-example",
+  "version": "1.0.0",
+  "description": "Example application to demonstrate pm2 deployments",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jutaz/pm2-deploy-example.git"
+  },
+  "keywords": [
+    "pm2",
+    "example"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jutaz/pm2-deploy-example/issues"
+  },
+  "homepage": "https://github.com/jutaz/pm2-deploy-example#readme"
+}
